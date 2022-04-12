@@ -602,7 +602,7 @@ if (this.state.InfoPage) {
        ) }/>
           {/* route for when you click "+" add a new project */}
        <Route path="/addAProject" render={props =>(
-          <NameAProject 
+          <NameAProject {...props}
           created={"true"}
           Arrange={this.Arrange}
           Arrange={this.Arrange}

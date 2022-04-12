@@ -10,7 +10,7 @@ import character from '../../charactericon.png'
 import help from '../../help.png'
 
 import Swipeout from 'react-native-swipeout';
-import App from '../App.js';
+import App from '../../App.js';
 import ARScene from '../../js/HelloWorldSceneAR'
 import { Col, Row, Grid } from "react-native-easy-grid";
 // import * as Permissions from 'expo-permissions'
@@ -304,8 +304,9 @@ return (
 </Route>
     {/* route for when you click an existing project */}
     {/* <Routes> */}
-        <Route path="/homepage" render={props => 
-          (<App {...props} renewed={"true"} reRender={this.props.reRender} />)
+        <Route path="/homepage" render={props => (
+        <App {...props} renewed={"true"}
+          reRender={this.props.reRender} />)
         }/>
 
     {/* </Routes> */}

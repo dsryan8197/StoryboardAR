@@ -145,7 +145,7 @@ return (
     {/* <Routes> */}
           {/* select a projec to go to the list of images (pics) */}
           <Route path="/pics" render={props => 
-           (<PickAPic
+           (<PickAPic {...props}
            deletePicture={this.props.deletePicture}
            goBackToInfo={this.props.goBackToInfo}
            activeProject={this.props.Info.activeProject}
@@ -156,7 +156,7 @@ return (
           }/>
           {/* select "+" to route to create a scene */}
              <Route path="/NameAScene" render={props =>( 
-           <NameAScene
+           <NameAScene {...props}
            created={"true"}
            Arrange={this.props.Arrange}
           goBackToInfo={this.props.goBackToInfo}
