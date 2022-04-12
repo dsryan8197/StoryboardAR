@@ -50,7 +50,7 @@ import {
 } from '@viro-community/react-viro';
 
 import { NativeModules, PermissionsAndroid, Image } from 'react-native';
-import { NativeRouter, Route, Link } from "react-router-native";
+import { NativeRouter, Route, Link, Routes } from "react-router-native";
 var sharedProps = {
   apiKey:"API_KEY_HERE",
 }
@@ -302,10 +302,13 @@ return (
   </Grid>
   </View>
 </Route>
-      {/* route for when you click an existing project */}
+    {/* route for when you click an existing project */}
+    {/* <Routes> */}
         <Route path="/homepage" render={props => 
           (<App {...props} renewed={"true"} reRender={this.props.reRender} />)
         }/>
+
+    {/* </Routes> */}
 </NativeRouter>
 </SafeAreaView>
   )}

@@ -494,6 +494,7 @@ if (this.state.InfoPage) {
 <SafeAreaView style={{width: '100%', height: '100%', background: 'transparent'}}>
 <StatusBar hidden={false} />
   <NativeRouter >
+    <Routes>
     <Route exact path="/">
    <View style={{flex: 1}}>
        <View style={{width: SCREEN_WIDTH,
@@ -583,10 +584,9 @@ if (this.state.InfoPage) {
 
    </Grid>
    </View>
-   {/* </View> */}
-  </Route>
-      <Route path="/scene" render={props => 
-          (<PickAScene {...props} 
+   </Route>
+      <Route path="/scene" render={props =>(
+          <PickAScene {...props}
           DeleteSceneDescription={this.DeleteSceneDescription}
           deletePicture={this.deletePicture}
           updatePictures={this.updatePictures}
@@ -596,11 +596,11 @@ if (this.state.InfoPage) {
           Info={this.state}
           Arrange={this.Arrange}
           Draggable={this.state[this.state.activeProject]}
-          ObjofProje={this.state.ProjectObj[this.state.activeProject]}/>)
-          }/>
+          ObjofProje={this.state.ProjectObj[this.state.activeProject]}/>
+       ) }/>
           {/* route for when you click "+" add a new project */}
-          <Route path="/addAProject" render={props => 
-          (<NameAProject {...props}
+       <Route path="/addAProject" render={props =>(
+          <NameAProject 
           created={"true"}
           Arrange={this.Arrange}
           Arrange={this.Arrange}
@@ -613,8 +613,9 @@ if (this.state.InfoPage) {
           AddSceneDescription={this.AddSceneDescription}
           AddProject={this.AddProject}
           handleChange={this.handleChange}
-          Info={this.state}/>)
-          }/>
+          Info={this.state}/>
+         )} />
+         </Routes>
   </NativeRouter>
 </SafeAreaView>
     )

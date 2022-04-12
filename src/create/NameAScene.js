@@ -28,7 +28,7 @@ import {
   ViroARSceneNavigator
 } from '@viro-community/react-viro';
 
-import { NativeRouter, Route, Link } from "react-router-native";
+import { NativeRouter, Route, Routes, Link } from "react-router-native";
 
 export default class NameAScene extends Component {
   constructor(props) {
@@ -133,10 +133,11 @@ render() {
     </Row>
   </Grid>
   </View>
- </Route>
+      </Route>
+      {/* <Routes> */}
          {/* routes to your list of pics in that scene (which will be none) */}
-     <Route path="/pics" render={props => 
-       (<PickAPic {...props}
+     <Route path="/pics" render={props =>( 
+       <PickAPic {...props}
        created={"true"}
        deletePicture={this.props.deletePicture}
        goBackToInfo={this.props.goBackToInfo}
@@ -148,7 +149,8 @@ render() {
        projectNameInput={this.props.ProjectNameInput}
        ObjofProje={this.props.ObjofProje}
        activeProject={this.props.activeProject}/>)
-     }/>
+     } />
+      {/* </Routes> */}
 </NativeRouter>
 </SafeAreaView>
 )}}

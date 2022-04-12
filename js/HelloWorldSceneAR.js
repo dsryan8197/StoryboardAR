@@ -88,7 +88,7 @@ renderModels = () => {
 
 // this does something with the viro react library. i dunno
   _onInitialized(state, reason) {
-    if (state == ViroConstants.TRACKING_NORMAL) {
+    if (state) {
       this.setState({
         text : "Hello World!"
       });

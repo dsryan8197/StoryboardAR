@@ -29,7 +29,7 @@ import {
   ViroARSceneNavigator
 } from '@viro-community/react-viro';
 
-import { NativeRouter, Route, Routes, Link } from "react-router-native";
+import { NativeRouter, Route, Routes, Router, Link } from "react-router-native";
 
 export default class NameAProject extends Component {
   constructor(props) {
@@ -111,7 +111,7 @@ render() {
   </View>
   </Route>
       {/* create a scene route */}
-       <Route path="/NameAScene" render={props => 
+       <Route path="/NameAScene" render={props =>
          (<NameAScene {...props}
          DeleteSceneDescription={this.props.DeleteSceneDescription}
          Arrange={this.props.Arrange}

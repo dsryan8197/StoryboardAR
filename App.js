@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PickAScene from './src/view/PickAScene'
 import NameAProject from './src/create/NameAProject'
+import NameAScene from './src/create/NameAScene'
 import persons from './Group8.png'
 import trash from './trashicon2.png'
 import Info1 from './slate1.jpg'
@@ -20,6 +21,7 @@ import back2 from './back2.png'
 import camera from './camerasnapshot.png'
 import character from './charactericon.png'
 import help from './help.png'
+
 
 // import {AnimatePResence, motion } from 'framer-motion'
 import {
@@ -42,7 +44,7 @@ import {
   ViroARSceneNavigator
 } from '@viro-community/react-viro';
 
-import { NativeRouter, Route, Routes, Link } from "react-router-native";
+import { NativeRouter, Route, Link } from "react-router-native";
 
 export default class PickAProject extends Component {
   constructor(props) {
@@ -493,8 +495,9 @@ if (this.state.InfoPage) {
  return (
 <SafeAreaView style={{width: '100%', height: '100%', background: 'transparent'}}>
 <StatusBar hidden={false} />
-  <NativeRouter>
-    {/* <Route exact path="/"> */}
+  <NativeRouter >
+    {/* <Routes> */}
+    <Route exact path="/">
    <View style={{flex: 1}}>
        <View style={{width: SCREEN_WIDTH,
                     height: 0,
@@ -583,11 +586,9 @@ if (this.state.InfoPage) {
 
    </Grid>
    </View>
-   {/* </View> */}
-       {/* </Route> */}
-       <Routes>
-      <Route path="/scene" render={props => 
-          (<PickAScene {...props} 
+   </Route>
+      <Route path="/scene" render={props =>(
+          <PickAScene {...props}
           DeleteSceneDescription={this.DeleteSceneDescription}
           deletePicture={this.deletePicture}
           updatePictures={this.updatePictures}
@@ -597,11 +598,11 @@ if (this.state.InfoPage) {
           Info={this.state}
           Arrange={this.Arrange}
           Draggable={this.state[this.state.activeProject]}
-          ObjofProje={this.state.ProjectObj[this.state.activeProject]}/>)
-          }/>
+          ObjofProje={this.state.ProjectObj[this.state.activeProject]}/>
+       ) }/>
           {/* route for when you click "+" add a new project */}
-          <Route path="/addAProject" element={ 
-          <NameAProject
+       <Route path="/addAProject" render={props =>(
+          <NameAProject 
           created={"true"}
           Arrange={this.Arrange}
           Arrange={this.Arrange}
@@ -615,8 +616,8 @@ if (this.state.InfoPage) {
           AddProject={this.AddProject}
           handleChange={this.handleChange}
           Info={this.state}/>
-          } />
-       </Routes>
+         )} />
+         {/* </Routes> */}
   </NativeRouter>
 </SafeAreaView>
     )
@@ -794,21 +795,3 @@ var localStyles = StyleSheet.create({
 });
 
 module.exports = PickAProject
-// export default () => {
-//   return (
-//     <View style={{width: '100%', height: '100%', backgroundColor: 'blue'}}>
-//       <Text style={{width: '100%', height: '100%'}}>gasdfadfasdfadsfaf</Text>
-//     </View>
-//   );
-// };
-
-// var styles = StyleSheet.create({
-//   f1: {flex: 1},
-//   helloWorldTextStyle: {
-//     fontFamily: 'Arial',
-//     fontSize: 30,
-//     color: '#ffffff',
-//     textAlignVertical: 'center',
-//     textAlign: 'center',
-//   },
-// });

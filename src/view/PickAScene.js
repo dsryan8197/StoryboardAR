@@ -31,7 +31,7 @@ import {
   ViroARSceneNavigator
 } from '@viro-community/react-viro';
 
-import { NativeRouter, Route, Link } from "react-router-native";
+import { NativeRouter, Route, Link, Routes } from "react-router-native";
 //on selecting a film (project),this shows all the scenes in that film or allows you to create a new
 export default class PickAScene extends Component {
   constructor(props) {
@@ -141,10 +141,11 @@ return (
       </Row>
     </Grid>
     </View>
-  </Route>
+    </Route>
+    {/* <Routes> */}
           {/* select a projec to go to the list of images (pics) */}
           <Route path="/pics" render={props => 
-           (<PickAPic {...props}
+           (<PickAPic
            deletePicture={this.props.deletePicture}
            goBackToInfo={this.props.goBackToInfo}
            activeProject={this.props.Info.activeProject}
@@ -154,8 +155,8 @@ return (
            Info={this.props.ObjofProje[this.state.activeScene]}/>)
           }/>
           {/* select "+" to route to create a scene */}
-             <Route path="/NameAScene" render={props => 
-           (<NameAScene {...props}
+             <Route path="/NameAScene" render={props =>( 
+           <NameAScene
            created={"true"}
            Arrange={this.props.Arrange}
           goBackToInfo={this.props.goBackToInfo}
@@ -166,7 +167,8 @@ return (
            ProjectNameInput={this.props.ProjectNameInput}
            AddSceneDescription={this.props.AddSceneDescription}
            Info={this.props.Info}/>)
-          }/>
+          } />
+    {/* </Routes> */}
 </NativeRouter>
 </SafeAreaView>
   )}}
