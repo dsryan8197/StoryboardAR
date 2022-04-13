@@ -118,7 +118,8 @@ _takeScreenshot() {
   if (!this.state.writeAccessPermission) {
     this.requestWriteAccessPermission();
   }
-  this._arNavigator._takeScreenshot("pb_" + this.state.screenshot_count, true).then((retDict)=>{
+  // window.alert(this._arNavigator._takeScreenshot("sb_" + this.state.screenshot_count))
+  this._arNavigator._takeScreenshot("sb_" + this.state.screenshot_count, false).then((retDict)=>{
     if (!retDict.success) {
       if (retDict.errorCode == ViroConstants.RECORD_ERROR_NO_PERMISSION) {
         this._displayVideoRecordAlert("Screenshot Error", "Please allow camera permissions!" + errorCode);
