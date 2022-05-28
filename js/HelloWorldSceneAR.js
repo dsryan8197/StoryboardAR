@@ -50,16 +50,19 @@ renderModels = () => {
   let arr = []
   for (let i = 0; i < this.props.sceneNavigator.viroAppProps.length; i++) {
   arr.push(
-    <ViroNode key={i} position={[1,-0.5,-2]} dragType="FixedToWorld" onDrag={()=>{}} >
-      <Viro3DObject
+    // <ViroNode key={i} position={[1,-0.5,-2]} dragType="FixedToWorld" onDrag={()=>{}} >
+    <Viro3DObject
+    key={i} 
        source={(this.props.sceneNavigator.viroAppProps[i])}
-       onClick={() => {this._onClick(i)}}
+        onClick={() => { this._onClick(i) }}
+        // dragType="FixedToWorld"
+        dragType="FixedDistance" onDrag={()=>{}} 
       //  resources={[(this.props.sceneNavigator.viroAppProps[i][1])]}
-       position={[0,-2.5,-1]}
+       position={[0,-2.5,-3]}
        animation={{name: "rotate", run: this.state.animation[i] , loop: true}}
        scale={[2.2, 2.2, 2.2]}
        type="GLB" />
-    </ViroNode>
+    // </ViroNode>
   )}
   return [arr]
 }
@@ -70,7 +73,7 @@ renderModels = () => {
         <ViroAmbientLight color={"#aaaaaa"} />
         <ViroSpotLight innerAngle={5} outerAngle={90} direction={[0,-1,-.2]}
           position={[0, 3, 1]} color="#ffffff" castsShadow={true} />
-        <ViroNode position={[1,-0.5,-2]} dragType="FixedToWorld" onDrag={()=>{}} >
+        {/* <ViroNode position={[1,-0.5,-2]} dragType="FixedToWorld" onDrag={()=>{}} > */}
            {/* <Viro3DObject
             source={require('../finalModels/Fall/AutumnManA.002.glb')}
             onClick={() => {this._onClick(0)}}
@@ -80,7 +83,7 @@ renderModels = () => {
             // rotation={[0, 0, 0]}
             scale={[2.5, 2.5, 2.5]}
             type="GLB" /> */}
-        </ViroNode>
+        {/* </ViroNode> */}
         {this.renderModels()}
       </ViroARScene>
     );

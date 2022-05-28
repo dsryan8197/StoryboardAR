@@ -294,8 +294,8 @@ return (
     <Row size={2} style={{marginBottom: '10%'}}>
        <View style={{alignItems: 'flex-start',  paddingLeft: '10%',width: '90%', justifyContent: 'center'}}>
          <Text style={localStyles.buttonTextII}>Draft</Text>
-         <Text style={{color: '#8F8F8F',  paddingTop: '3%', fontSize: 20}}>Create your films and your scenes</Text>
-         <Text style={{color: '#8F8F8F',paddingTop: '3%', fontSize: 20}}>Swipe scenes to delete</Text>
+         <Text style={{color: '#8F8F8F',  paddingTop: '3%', fontSize: 20}}>Create your films and scenes</Text>
+         <Text style={{color: '#8F8F8F',paddingTop: '3%', fontSize: 20}}>Swipe scenes to ediit</Text>
       </View>
     </Row>
     <Row size={1} style={{ alignItems: 'center'}}>
@@ -434,9 +434,9 @@ return (
      </Row>
      <Row size={2} style={{marginBottom: '10%'}} >
         <View style={{alignItems: 'flex-start',  paddingLeft: '10%', width: '90%', justifyContent: 'center'}}>
-          <Text style={localStyles.buttonTextII}>Save</Text>
-         <Text style={{color: '#8F8F8F', paddingTop: '3%', fontSize: 20}}>Check your photo gallery</Text>
-         <Text style={{color: '#8F8F8F', paddingTop: '3%', fontSize: 20}}>For your storyboards</Text>
+          <Text style={localStyles.buttonTextII}>Create</Text>
+         <Text style={{color: '#8F8F8F', paddingTop: '3%', fontSize: 20}}>Tap and drag your characters</Text>
+         <Text style={{color: '#8F8F8F', paddingTop: '3%', fontSize: 20}}>and walk them around your scene</Text>
        </View>
       </Row>
       <Row size={1} style={{alignItems: 'center'}}>

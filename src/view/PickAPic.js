@@ -119,7 +119,8 @@ _takeScreenshot() {
     this.requestWriteAccessPermission();
   }
   // window.alert(this._arNavigator._takeScreenshot("sb_" + this.state.screenshot_count))
-  this._arNavigator._takeScreenshot("sb_" + this.state.screenshot_count, false).then((retDict)=>{
+  this._arNavigator._takeScreenshot("sb_" + this.state.screenshot_count, false).then((retDict) => {
+    // window.alert(JSON.stringify(retDict))
     if (!retDict.success) {
       if (retDict.errorCode == ViroConstants.RECORD_ERROR_NO_PERMISSION) {
         this._displayVideoRecordAlert("Screenshot Error", "Please allow camera permissions!" + errorCode);
@@ -348,7 +349,7 @@ return (
         style={localStyles.backButtonAR}
         source={back2} >
          </Image>
-    </TouchableHighlight>
+            </TouchableHighlight>
      <TouchableHighlight style={localStyles.Modelbuttonschar} onPress={()=> {(
        this.setState((prevState) => ({
         navigator : 'Characters'
@@ -555,6 +556,7 @@ var localStyles = StyleSheet.create({
   capture: {
     position: 'absolute',
     right: '50%',
+    width: 100,
     left: '40%',
     bottom: '2%',
   },
