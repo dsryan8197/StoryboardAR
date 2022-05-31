@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NameAProject from './create/NameAProject'
 import persons from '../Group8.png'
 import trash from '../trashicon2.png'
 import Info1 from '../slate1.jpg'
@@ -8,10 +7,7 @@ import Info3 from '../camera1.jpg'
 import Info4 from '../Info4.jpg'
 import Info5 from '../Info5.jpg'
 import back from '../backArrow.png'
-import { Col, Row, Grid } from "react-native-easy-grid";
-import AnimatedDotsCarousel from 'react-native-animated-dots-carousel';
-import Swipeout from 'react-native-swipeout';
-import { AsyncStorage } from 'react-native';
+import { Row, Grid } from "react-native-easy-grid";
 import download from '../downArrow.png'
 import bigDownload from '../bigDownload.png'
 import back2 from '../back2.png'
@@ -23,27 +19,13 @@ import ARbackArrow from '../ARbackArrow.png'
 import arrowforpages from '../arrowforpages.png'
 
 import {
-  AppRegistry,
-  Text,
-  Button,
-  View,
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  PixelRatio,
-  Dimensions,
-  ScrollView,
   Image,
-  TouchableHighlight,
 } from 'react-native';
 
-import {
-  ViroVRSceneNavigator,
-  ViroARSceneNavigator
-} from '@viro-community/react-viro';
-
-import { Redirect, NativeRouter, Route, Link } from "react-router-native";
-// import { FileSystem } from 'expo'
+import { NativeRouter, Route } from "react-router-native";
 export default class Splash extends Component {
  constructor(props) {
     super();
@@ -118,8 +100,8 @@ var localStyles = StyleSheet.create({
   },
   Film: {
     color:'#7844CA',
-    justifyContent: 'center', //Centered horizontally
-    alignItems: 'center', //Centered vertically
+    justifyContent: 'center',
+    alignItems: 'center',
     borderColor: '#C3BEF7',
     borderRadius: 50,
     fontSize : 30,
@@ -159,7 +141,7 @@ var localStyles = StyleSheet.create({
     height: 80,
     width: '100%',
     alignContent: 'center',
-    alignItems: 'center', //Centered vertically    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 10,
     marginBottom: 10,
     justifyContent: 'center',

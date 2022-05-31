@@ -1,3 +1,7 @@
+//TODO delete this file
+
+
+
 import React, { Component } from 'react';
 import PickAScene from './view/PickAScene'
 import NameAProject from './create/NameAProject'
