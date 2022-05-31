@@ -1,29 +1,46 @@
-# Viro Starter Kit
+<p align='center'>
+<img src='https://github.com/dsryan8197/photoboardlanding/blob/master/logo.png' width=100%>
+</p>
+<h4 align='center'>an Augmented Reality app to help filmmakers storyboard their films</h4>
 
-This is a blank React Native project setup with Viro.
+<div align='center'>
+<img src='https://github.com/dsryan8197/photoboardlanding/blob/master/storyboard2copy.gif' width=480 height=222/>
+<img src='./Group6.png' width=300 height=300/>
+      </div>
+<div align='center' >
+<img src='https://github.com/dsryan8197/photoboardlanding/blob/master/storyboardfinal.gif' width=222 height=480/>
+</div>
 
-## Prerequesites 
+## Download IOS app v.2.2
+<a href="https://apps.apple.com/us/app/storyboardar/id1619218172" download>Install</a>
 
-Set up the development environment for [react native](https://reactnative.dev/docs/environment-setup). 
+## Contribute
+Feel free to raise a PR against an open issue or raise an issue yourself. We're always looking to improve!
 
-> ⚠️ NOTE: The android emulators are not supported by Viro. See [this](https://viro-community.readme.io/docs/frequently-asked-questions#does-this-work-with-ios-simulators-or-android-emulators).
+1. `npm install`
+2. `npx pod-install` (iOS)
+3. Connect device to Xcode
+4. `npx react-native run-ios`
+5. Build in Xcode
 
-## Installation
+## File Structure
+```
+Src folder
+      ----App.js-----
+     |              |
+NameAProject       PickAScene
+     |              |
+NameAScene          |
+     |------->   PickAPic
 
-1. `git clone https://github.com/ViroCommunity/starter-kit.git`
-2. `cd starter-kit`
-3. `npm install`
-4. `npx pod-install` (iOS)
-5. `npx react-native run-android` or `npx react-native run-ios`
+PickAPic.js renders 4 components:
+ -images
+ -AR visualizer
+ -Characters
+ -Character poses      
 
-if `npx react-native run-android` fails with EACCESS gradlew.bat or EACCESS gradlew, run `chmod +x gradlew.bat` or `chmod +x gradlew`.
-
-NOTE: The variant arguments are not needed for debug or release.
-
-## How to Install Viro in an existing project?
-
-If you are integrating ViroReact into an existing project, have a look at our [Installation instructions](https://github.com/ViroCommunity/viro/blob/main/readmes/INSTALL.md). Please note that this does _not_ work with Expo Managed Workflows. Sorry!
-
-# Need help?
-
-[Reach us in Discord.](https://discord.gg/YfxDBGTxvG)
+ MODLES/Images:
+ finalModles folder - all the gltfs of models
+ picsofModels folder -all the images of models
+ ModelScript.js - my api for the above folders
+```
